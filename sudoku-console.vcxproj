@@ -125,10 +125,15 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="puzzle.cpp" />
+    <ClCompile Include="puzzleLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="puzzle.h" />
+    <ClInclude Include="puzzleLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="50puzzles.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

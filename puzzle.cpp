@@ -1,29 +1,19 @@
 #include "puzzle.h"
 #include <stdio.h>
 
-int startingPuzzle[N][N] = {
-	{0, 0, 0, 2, 6, 0, 7, 0, 1},
-	{6, 8, 0, 0, 7, 0, 0, 9, 0},
-	{1, 9, 0, 0, 0, 4, 5, 0, 0},
-	{8, 2, 0, 1, 0, 0, 0, 4, 0},
-	{0, 0, 4, 6, 0, 2, 9, 0, 0},
-	{0, 5, 0, 0, 0, 3, 0, 2, 8},
-	{0, 0, 9, 3, 0, 0, 0, 7, 4},
-	{0, 4, 0, 0, 5, 0, 0, 3, 6},
-	{7, 0, 3, 0, 1, 8, 0, 0, 0}
-};
-
+int startingPuzzle[N][N];
 int puzzle[N][N];
 bool row_set[N][N + 1];
 bool col_set[N][N + 1];
 bool box_set[N][N + 1];
 
-void init_puzzle() {
+void init_puzzle(int _startingPuzzle[N][N]) {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
+			startingPuzzle[i][j] = _startingPuzzle[i][j];
 			row_set[i][j + 1] = false;
 			col_set[i][j + 1] = false;
-			box_set[i][j+ 1] = false;
+			box_set[i][j + 1] = false;
 		}
 	}
 

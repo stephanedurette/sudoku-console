@@ -1,6 +1,6 @@
 #define N 9 
 
-void init_puzzle();
+void init_puzzle(int _startingPuzzle[N][N]);
 
 bool insert_value(int position, int value);
 

@@ -21,6 +21,9 @@
     <ClCompile Include="puzzle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="puzzleLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -29,5 +32,13 @@
     <ClInclude Include="puzzle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="puzzleLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="50puzzles.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
