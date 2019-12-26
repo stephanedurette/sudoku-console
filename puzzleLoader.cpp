@@ -1,8 +1,13 @@
 #include "puzzleLoader.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-bool loadPuzzle(int loadedPuzzle[N][N], int index) {
+PuzzleLoader::PuzzleLoader() {
+	srand(time(NULL));
+}
+
+bool PuzzleLoader::loadPuzzle(int index) {
 	if (index < 0 || index > MAX_INDEX) return false;
 
 	FILE* fp;
@@ -17,8 +22,13 @@ bool loadPuzzle(int loadedPuzzle[N][N], int index) {
 	while (puzzleLine[i] != ',') {
 		int row = i / N;
 		int col = i % N;
-		loadedPuzzle[row][col] = (int)(puzzleLine[i++] - '0');
+		puzzle[row][col] = (int)(puzzleLine[i++] - '0');
 	}
 	return true;
+}
+
+bool PuzzleLoader::loadRandomPuzzle() {
+	int index = rand() % (MAX_INDEX + 1);
+	return loadPuzzle(index);
 }
 

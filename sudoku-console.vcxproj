@@ -128,7 +128,6 @@
     <ClCompile Include="puzzleLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
     <ClInclude Include="puzzle.h" />
     <ClInclude Include="puzzleLoader.h" />
   </ItemGroup>
